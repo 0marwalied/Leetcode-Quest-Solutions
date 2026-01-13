@@ -1,0 +1,6 @@
+-- Q1. Students and Examinations
+select s.student_id,s.student_name,ss.subject_name,count(e.student_id) as attended_exams
+from Students s 
+cross join Subjects ss
+left join Examinations e on e.subject_name=ss.subject_name and s.student_id=e.student_id
+group by s.student_id,s.student_name,ss.subject_name

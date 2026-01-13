@@ -1,0 +1,34 @@
+-- Q1. Analyze Organization Hierarchy
+with recursive cte as (
+    select employee_id, manager_id, employee_name, salary, 1 as level
+    from employees
+    where manager_id is null
+    union all
+    select e.employee_id, e.manager_id, e.employee_name, e.salary, c.level + 1 as level
+    from employees e
+    join cte c on e.manager_id = c.employee_id
+),
+cte2 as (
+    select distinct
+           c.employee_id,
+           c.employee_name,
+           c.level,
+           count(e.employee_id) over (partition by c.employee_id) as team_size,
+           coalesce(sum(e.salary) over (partition by c.employee_id), 0) + c.salary as budget
+    from cte c
+    left join lateral (
+        with recursive cte1 as (
+            select employee_id, manager_id, salary
+            from employees e
+            where e.manager_id = c.employee_id
+            union all
+            select ee.employee_id, ee.manager_id, ee.salary
+            from cte1 cc
+            join employees ee on ee.manager_id = cc.employee_id
+        )
+        select * from cte1
+    ) e on true
+)
+select *
+from cte2
+order by level, budget desc, employee_name;

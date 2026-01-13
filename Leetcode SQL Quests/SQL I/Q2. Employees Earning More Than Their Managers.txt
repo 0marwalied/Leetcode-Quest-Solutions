@@ -1,0 +1,4 @@
+-- Q2. Employees Earning More Than Their Managers
+select emp1.name as Employee
+from employee emp1 join employee emp2
+on emp1.managerId=emp2.id and emp1.salary>emp2.salary;

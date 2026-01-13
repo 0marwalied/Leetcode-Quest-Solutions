@@ -1,0 +1,20 @@
+-- Q4.Human Traffic of Stadium
+with filtered as(
+    select id,visit_date,people
+    from Stadium
+    where people>=100
+),
+grouped as (
+    select id,visit_date,people,id-row_number() over(order by id) as grp
+    from filtered
+),
+valid_groups as(
+    select grp
+    from grouped
+    group by grp
+    having count(*)>=3
+)
+select g.id,g.visit_date,g.people
+from grouped g
+join valid_groups v on g.grp=v.grp
+order by g.visit_date asc;

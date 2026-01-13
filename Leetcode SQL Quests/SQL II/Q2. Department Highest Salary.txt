@@ -1,0 +1,10 @@
+-- Q2. Department Highest Salary
+with tmp as (
+    select d.Name as Department,e.Name as Employee,salary,
+    dense_rank() over(partition by DepartmentId order by salary desc) as dr
+    from Employee e
+    join Department d on d.id=DepartmentId   
+)
+select Department,Employee,salary
+from tmp
+where dr=1

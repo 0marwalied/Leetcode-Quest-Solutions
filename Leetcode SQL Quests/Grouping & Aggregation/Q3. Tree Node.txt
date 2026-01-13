@@ -1,0 +1,25 @@
+-- Q3. Tree Node
+select id,"Root" as type
+from Tree where p_id is null 
+union all
+select t1.id,"Inner" as type
+from Tree t1 join Tree t2
+on t1.p_id=t2.id
+join Tree t3 on t3.p_id=t1.id
+group by t1.id
+union all
+select id,"Leaf" as type
+from Tree
+where id not in
+(select distinct (CASE WHEN p_id is not null THEN p_id ELSE id END)from Tree)
+
+-----------------------------------------------------------------------------------------------------
+OR
+-----------------------------------------------------------------------------------------------------
+select id,
+       case 
+           when p_id is null then 'Root'
+           when id in (select distinct p_id from Tree where p_id is not null) then 'Inner'
+           else 'Leaf'
+       end as type
+from Tree;

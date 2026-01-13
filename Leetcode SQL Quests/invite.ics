@@ -1,0 +1,59 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Europe/Budapest
+X-LIC-LOCATION:Europe/Budapest
+BEGIN:DAYLIGHT
+TZOFFSETFROM:+0100
+TZOFFSETTO:+0200
+TZNAME:GMT+2
+DTSTART:19700329T020000
+RRULE:FREQ=YEARLY;BYMONTH=3;BYDAY=-1SU
+END:DAYLIGHT
+BEGIN:STANDARD
+TZOFFSETFROM:+0200
+TZOFFSETTO:+0100
+TZNAME:GMT+1
+DTSTART:19701025T030000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=-1SU
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Europe/Budapest:20260112T163000
+DTEND;TZID=Europe/Budapest:20260112T164500
+DTSTAMP:20260108T212232Z
+ORGANIZER;CN=Vivien Jozsa:mailto:vivien.jozsa@nixs.com
+UID:5ds90nd8mfct43nkl3jn60dcng@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=mohamedalii7405@gmail.com;X-NUM-GUESTS=0:mailto:mohamedalii7405@gma
+ il.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Vivien Jozsa;X-NUM-GUESTS=0:mailto:vivien.jozsa@nixs.com
+X-GOOGLE-CONFERENCE:https://meet.google.com/oop-hkev-hek
+X-MICROSOFT-CDO-OWNERAPPTID:-73296507
+CREATED:20260108T212228Z
+DESCRIPTION:Event Name\n15 Minute Meeting\n\nLocation: This is a Google Mee
+ t web conference.\nYou can join this meeting from your computer\, tablet\, 
+ or smartphone.\nhttps://calendly.com/events/1711eea7-b292-4628-9b21-2e2b96d
+ a95c5/google_meet\n\nNeed to make changes to this event?\nCancel: https://c
+ alendly.com/cancellations/2ea948dc-adb8-40a1-a20c-7ac04d0e7f7c\nReschedule:
+  https://calendly.com/reschedulings/2ea948dc-adb8-40a1-a20c-7ac04d0e7f7c\n\
+ nPowered by Calendly.com\n\n\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~
+ :~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-\nJoin with Google Meet: https://
+ meet.google.com/oop-hkev-hek\nOr dial: (HU) +36 21 262 4961 PIN: 983561824#
+ \nMore phone numbers: https://tel.meet/oop-hkev-hek?pin=2002214438322&hs=7\
+ n\nLearn more about Meet at: https://support.google.com/a/users/answer/9282
+ 720\n\nPlease do not edit this section.\n-::~:~::~:~:~:~:~:~:~:~:~:~:~:~:~:
+ ~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~:~::~:~::-
+LAST-MODIFIED:20260108T212232Z
+LOCATION:Google Meet (instructions in description)\; https://meet.google.co
+ m/oop-hkev-hek
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Mohamed Ibrahim Ali and Vivien Jozsa
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
