@@ -1,3 +1,3 @@
 # I am solving LeetCode Math [Quest](https://leetcode.com/quest/maths-quest/)
 
-<img width="1919" height="917" alt="Screenshot 2025-12-01 134630" src="https://github.com/user-attachments/assets/e16000db-47ee-4b55-b1fe-8a254afd3a16" />
+<img width="720" height="720" alt="image" src="https://github.com/user-attachments/assets/1845a0bb-1967-4292-99ed-d3f3a54682e4" />
